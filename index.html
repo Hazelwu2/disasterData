@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>颱風防災 API串接Maps</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:url"           content="https://hazelwu2.github.io/sample/" />
+      <meta property="og:type"          content="website" />
+      <meta property="og:title"         content="颱風防災 API串接Maps" />
+      <meta property="og:description"   content="Your description" />
+      <meta property="og:image"         content="https://hazelwu2.github.io/sample/" />
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Abel|Source+Sans+Pro:400,300,300italic,400italic,600,600italic,700,700italic,900,900italic,200italic,200">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/vendor/backward/html5shiv.js"></script>
+    <script src="assets/vendor/backward/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    
+        <div class="wrap">
+        <header>
+            <div class="banner">
+            <form class="form">
+                <h1>台北市最新災情資料查詢</h1>
+                <p>提供全區最新動態、各區資訊</p>
+                <div class="select">
+                    <select name="select-list" id="js-select" class="select-style js-select">
+                        <option value="" disabled selected>-- 請選擇行政區 --</option>
+                        <option value="全區">全區最新動態</option>
+                        <option value="松山區">松山區</option>
+                        <option value="信義區">信義區</option>
+                        <option value="大安區">大安區</option>
+                        <option value="中山區">中山區</option>
+                        <option value="中正區">中正區</option>
+                        <option value="大同區">大同區</option>
+                        <option value="萬華區">萬華區</option>
+                        <option value="文山區">文山區</option>
+                        <option value="南港區">南港區</option>
+                        <option value="內湖區">內湖區</option>
+                        <option value="士林區">士林區</option>
+                        <option value="北投區">北投區</option>
+                    </select>
+                </div>
+            </form>
+            </div>
+        </header>
+        <div class="content" id="js-content">
+            <div class="content-table">
+            <div id="map"></div>
+            <p class="contact-info bg-danger" id="contact-info">防災災情及相關諮詢電話：87863119 分機 8900~8907 </p>
+                <table class="table table-striped">
+                    <thead> 
+                        <label></label>
+                        <th class="info">發生時間</th>
+                        <th class="info">行政區</th>
+                        <th class="info">詳細位置</th>
+                        <th class="info">描述</th>
+                    </thead>
+                    <tbody id="js-tbody">
+                    </tbody>
+                </table>
+            </div>
+            <footer>
+                <span class="footer-title">台北最新災情資訊</span>
+                <ul class="footer-nav">
+                    <li><a href="https://taipeicity.github.io/eoc_119/" target="_blank">資料來源：臺北市政府消防局</a></li>
+                </ul>
+            </footer>
+            <span class="glyphicon glyphicon-circle-arrow-up gotop" aria-hidden="true"></span>
+        </div>
+    </div>
+
+
+    <!-- Google Map API loading -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASGAMHaWutvFnNzkDlqzHFSqbxLPyxAmA">
+    </script>
+    <!-- jQuery, Bootstrap 3.3.7 Loading -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+
+    
